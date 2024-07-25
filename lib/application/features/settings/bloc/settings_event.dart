@@ -2,9 +2,15 @@ part of 'settings_bloc.dart';
 
 @freezed
 class SettingsEvent with _$SettingsEvent {
-const factory SettingsEvent.createConnection() = _createConnection;
+const factory SettingsEvent.createConnection({
+  required BuildContext context,
+  required String url,
+}) = _createConnection;
 
-const factory SettingsEvent.discontion() = _discontion;
+const factory SettingsEvent.discontion({
+    required BuildContext context,
+  required String url,
+}) = _discontion;
 
 
 }

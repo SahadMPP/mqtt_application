@@ -6,7 +6,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> massageList= ['massage','Hiiiii'];
+    List<String> massageList = ['massage', 'Hiiiii'];
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -36,56 +36,67 @@ class Home extends StatelessWidget {
           )
         ],
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(12.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Row(
-      children: [
-        const Expanded(
-            child: TextField(
-          decoration: InputDecoration(hintText: "Enter Topic"),
-        )),
-        const SizedBox(width: 10),
-        ElevatedButton(
-          onPressed: (){},
-          style: ButtonStyle(
-            backgroundColor: WidgetStatePropertyAll(Colors.green[500]),
-              shape: WidgetStatePropertyAll(ContinuousRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)))),
-          child: const Text("Subscribe",style: TextStyle(color: Colors.white),),
-        ),
-      ],
-    ),
-    Row(
-      children: [
-        const Expanded(
-            child: TextField(
-          decoration: InputDecoration(hintText: "The massage text to be sent"),
-        )),
-        const SizedBox(width: 10),
-        ElevatedButton(
-          onPressed: (){},
-          style: ButtonStyle(
-            backgroundColor: WidgetStatePropertyAll(Colors.green[500]),
-              shape: WidgetStatePropertyAll(ContinuousRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)))),
-          child: const Text('Publish',style: TextStyle(color: Colors.white),),
-        ),
-      ],
-    ),
-   
+              children: [
+                const Expanded(
+                    child: TextField(
+                  decoration: InputDecoration(hintText: "Enter Topic"),
+                )),
+                const SizedBox(width: 10),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                      backgroundColor:
+                          WidgetStatePropertyAll(Colors.green[500]),
+                      shape: WidgetStatePropertyAll(ContinuousRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)))),
+                  child: const Text(
+                    "Subscribe",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                const Expanded(
+                    child: TextField(
+                  decoration:
+                      InputDecoration(hintText: "The massage text to be sent"),
+                )),
+                const SizedBox(width: 10),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                      backgroundColor:
+                          WidgetStatePropertyAll(Colors.green[500]),
+                      shape: WidgetStatePropertyAll(ContinuousRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)))),
+                  child: const Text(
+                    'Publish',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
             const SizedBox(height: 30),
             Container(
               height: 300,
               width: double.infinity,
               color: Colors.grey[300],
               margin: const EdgeInsets.all(8),
-              child: ListView.builder(itemCount: massageList.length,itemBuilder: (context, index) => Padding(
-                padding: const EdgeInsets.only(left: 10,top: 10),
-                child: Text(massageList[index]),
-              ),),
+              child: ListView.builder(
+                itemCount: massageList.length,
+                itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.only(left: 10, top: 10),
+                  child: Text(massageList[index]),
+                ),
+              ),
             )
           ],
         ),
@@ -93,4 +104,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
