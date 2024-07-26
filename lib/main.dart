@@ -1,6 +1,5 @@
 import 'package:application_mqtt/application/features/home/bloc/home_bloc.dart';
 import 'package:application_mqtt/application/features/home/ui/home_ui.dart';
-import 'package:application_mqtt/application/features/settings/bloc/settings_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,7 +15,6 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
       BlocProvider(create: (context) => HomeBloc(),),
-      BlocProvider(create: (context) => SettingsBloc(),),
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
